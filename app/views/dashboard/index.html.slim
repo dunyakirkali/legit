@@ -1,5 +1,15 @@
-h1 Dashboard#index
-p Find me in app/views/dashboard/index.html.slim
+.row
+  h1 Loyo
+
+.row
+  h2 Language
+  span Main language:
+  .chip
+    span= @project.language
+  span Languages:
+  - @project.languages.each do |language, count|
+    .chip
+      span= language
 
 .row
   canvas id="myChart" width="400" height="400"
