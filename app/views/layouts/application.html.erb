@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>Legit</title>
+    <title>Le-git</title>
     <%= csrf_meta_tags %>
 
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
@@ -9,6 +9,20 @@
   </head>
 
   <body>
+    <div class="row">
+      <nav>
+        <div class="nav-wrapper">
+          <a href="#" class="brand-logo">Le-git</a>
+          <ul id="nav-mobile" class="right hide-on-med-and-down">
+            <li>
+              <%= link_to "iOS", root_path(platform: 'ios') %>
+            <li>
+              <%= link_to "Android", root_path(platform: 'android') %>
+            </li>
+          </ul>
+        </div>
+      </nav>
+    </div>
     <%= yield %>
   </body>
 </html>

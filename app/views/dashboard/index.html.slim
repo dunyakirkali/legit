@@ -1,15 +1,18 @@
 .row
-  h1 Loyo
-
-.row
-  h2 Language
-  span Main language:
-  .chip
-    span= @project.language
-  span Languages:
-  - @project.languages.each do |language, count|
-    .chip
-      span= language
-
-.row
-  canvas id="myChart" width="400" height="400"
+  .col.s12
+    ul.tabs
+      li.tab.col.s3
+        a.active href="#language" Language
+      li.tab.col.s3
+        a href="#change" Change
+      li.tab.col.s3.disabled
+        a href="#test3" Disabled Tab
+      li.tab.col.s3
+        a href="#cdt" CDT
+  #language.col.s12
+    .row
+      #languages.row data-languages="#{@languages.to_json}"
+        canvas id="myChart" width="400" height="400"
+  #change.col.s12 Test 2
+  #test3.col.s12 Test 3
+  #cdt.col.s12 Code-To-Deploy Time
